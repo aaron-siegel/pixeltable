@@ -18,7 +18,7 @@
     
     
       
-        <title>Getting Started with Pixeltable - Pixeltable</title>
+        <title>Differences with Pandas - Pixeltable</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started-with-pixeltable" class="md-skip">
+        <a href="#differences-with-pandas" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started with Pixeltable
+              Differences with Pandas
             
           </span>
         </div>
@@ -417,32 +417,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-pixeltable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Pixeltable
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a Notebook
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -462,65 +436,58 @@
   
 
 
-<h1 id="getting-started-with-pixeltable">Getting Started with Pixeltable</h1>
-<p>This is a step-by-step guide to setting up a local installation of Pixeltable.</p>
-<p>You'll want to install Pixeltable in a Python virtual environment; we'll use Apache Miniconda
-in this guide, but any environment manager should work. Pixeltable works with Python 3.9, 3.10,
-or 3.11 running on Linux or MacOS.</p>
-<h2 id="install-pixeltable">Install Pixeltable</h2>
-<ol>
-<li>
-<p>Install Miniconda here:</p>
-<ul>
-<li><a href="https://docs.anaconda.com/free/miniconda/miniconda-install/">Installing Miniconda</a></li>
-</ul>
-</li>
-<li>
-<p>Create your environment:</p>
-<ul>
-<li><code>conda create --name pxt python=3.10</code></li>
-<li><code>conda activate pxt</code></li>
-</ul>
-</li>
-<li>
-<p>Install pixeltable and Jupyter inside the new environment:</p>
-<ul>
-<li><code>pip install pixeltable jupyter</code></li>
-</ul>
-</li>
-</ol>
-<h2 id="create-a-notebook">Create a Notebook</h2>
-<ol>
-<li>
-<p>Start your Jupyter notebook server:</p>
-<ul>
-<li><code>jupyter notebook</code></li>
-</ul>
-</li>
-<li>
-<p>Create a new notebook:</p>
-<ul>
-<li>Select "Python 3 (ipykernel)" as the kernel</li>
-<li>File / New / Notebook</li>
-</ul>
-</li>
-<li>
-<p>Test that everything is working by entering these commands into the notebook:</p>
-<ul>
-<li><code>import pixeltable as pxt</code></li>
-<li><code>pxt.list_tables()</code></li>
-</ul>
-</li>
-<li>
-<p>Wait a minute for Pixeltable to load; then you should see a message indicating that
-    Pixeltable has successfully connected to the database. (The call to <code>pxt.list_tables()</code>
-    will return an empty list, because you haven't created any tables yet.)</p>
-</li>
-</ol>
-<p>At this point, you're set up to start using Pixeltable! For a tour of what it can
-do, a good place to start is the
-<a href="https://pixeltable.github.io/pixeltable/tutorials/pixeltable-basics/">Pixeltable Basics</a>
-tutorial.</p>
+<h1 id="differences-with-pandas">Differences with Pandas</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Pandas</th>
+<th style="text-align: left;">Pixeltable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">reading data</td>
+<td style="text-align: left;">Read from file system with <code>pd.read_*</code> methods: eg, <code>.csv</code>, <code>.json</code>, <code>.parquet</code>, etc.</td>
+<td style="text-align: left;">In <code>pixeltable</code>, data is stored in tables. <code>cl.list_tables</code>, <code>tab = cl.get_table('mytable')</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">saving data (fist time)</td>
+<td style="text-align: left;">Save to file system, format of choice</td>
+<td style="text-align: left;"><code>table.insert</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">updating data</td>
+<td style="text-align: left;">to update data persistently, use <code>pd.write_*()</code>  to over-write or save new versions of the dataset</td>
+<td style="text-align: left;"><code>table.update</code> statements on tables allow for fine-grained persistent updates only on columns with specific values</td>
+</tr>
+<tr>
+<td style="text-align: left;">selecting rows</td>
+<td style="text-align: left;"><code>df[ df.col &gt; 1 ]</code></td>
+<td style="text-align: left;"><code>tab.where(tab.col &gt; 1)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">selecting rows (predicates)</td>
+<td style="text-align: left;"><code>df[(df.a &gt; 0) &amp; (df.b &gt; 0)]</code></td>
+<td style="text-align: left;"><code>df.where((df.a &gt; 0) &amp; (df.b &gt; 0))</code> both will error if <code>and</code> or <code>or</code> is used.</td>
+</tr>
+<tr>
+<td style="text-align: left;">selecting columns (aka projection)</td>
+<td style="text-align: left;"><code>df[['col']]</code></td>
+<td style="text-align: left;"><code>tab.select(tab.col)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">new column with computed value</td>
+<td style="text-align: left;"><code>df.assign(new_col= fun(df.input_col1, df.input_col2,..))</code> or <code>df['new_col'] = fun(df.input_col1, df.input_col2,..))</code> (the latter acts in-place, modifying the df object)</td>
+<td style="text-align: left;"><code>tab.select(old_colA, old_colB,  new_col=fun(tab.input_col1, tab.input_col2,...))</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">computing new values row by row</td>
+<td style="text-align: left;"><code>df['new_col'] = df.apply(fun, axis=1)</code></td>
+<td style="text-align: left;"><code>df.select(old_colA, old_colB, ..., new_col=pxt.function(fun)(tab.input_col1, tab.input_col2,...)</code></td>
+</tr>
+</tbody>
+</table>
 
 
 

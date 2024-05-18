@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../insertable-table/">
+        <link rel="prev" href="../pixeltable/">
       
       
-        <link rel="next" href="../view/">
+        <link rel="next" href="../insertable-table/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Table - Pixeltable</title>
+        <title>DataFrame - Pixeltable</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#table" class="md-skip">
+        <a href="#dataframe" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Table
+              DataFrame
             
           </span>
         </div>
@@ -316,10 +316,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../data-frame/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DataFrame
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -328,6 +348,149 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;DataFrame
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" DataFrame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.select" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.where" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;where
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.group_by" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;group_by
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.order_by" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;order_by
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;limit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;collect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.show" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;show
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.head" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;head
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;tail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.to_pytorch_dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_pytorch_dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.to_coco_dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_coco_dataset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -358,30 +521,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Table
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,131 +533,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pixeltable.Table" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Table
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=" Table">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.__getattr__" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;__getattr__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.__getitem__" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;__getitem__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.df" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;df
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.select" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;select
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.where" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;where
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.show" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;show
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.head" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;head
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.tail" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;tail
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.count" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;count
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.describe" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;describe
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -575,44 +593,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pixeltable.Table" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Table
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label=" Table">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;DataFrame
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" DataFrame">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pixeltable.Table.__getattr__" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;__getattr__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.__getitem__" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;__getitem__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.df" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;df
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pixeltable.Table.select" class="md-nav__link">
+  <a href="#pixeltable.DataFrame.select" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;select
     </span>
@@ -621,7 +621,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pixeltable.Table.where" class="md-nav__link">
+  <a href="#pixeltable.DataFrame.where" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;where
     </span>
@@ -630,7 +630,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pixeltable.Table.show" class="md-nav__link">
+  <a href="#pixeltable.DataFrame.group_by" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;group_by
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.order_by" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;order_by
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;limit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;collect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixeltable.DataFrame.show" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;show
     </span>
@@ -639,7 +675,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pixeltable.Table.head" class="md-nav__link">
+  <a href="#pixeltable.DataFrame.head" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;head
     </span>
@@ -648,7 +684,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pixeltable.Table.tail" class="md-nav__link">
+  <a href="#pixeltable.DataFrame.tail" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;tail
     </span>
@@ -657,18 +693,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pixeltable.Table.count" class="md-nav__link">
+  <a href="#pixeltable.DataFrame.to_pytorch_dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;count
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_pytorch_dataset
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pixeltable.Table.describe" class="md-nav__link">
+  <a href="#pixeltable.DataFrame.to_coco_dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;describe
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_coco_dataset
     </span>
   </a>
   
@@ -700,17 +736,93 @@
   
 
 
-<h1 id="table">Table</h1>
-<p>The <code>Table</code> base class provides convenience functions for querying tables and views
-without having to construct <a class="autorefs autorefs-internal" href="../data-frame/#pixeltable.DataFrame"><code>DataFrame</code></a> instances explicitly.</p>
+<h1 id="dataframe">DataFrame</h1>
+<p><code>DataFrame</code> represents a query against a specific table. Unlike computation container frameworks like pandas or Dask,
+Pixeltable dataframes do not hold data or allow you to update data (use <a class="autorefs autorefs-internal" href="../insertable-table/#pixeltable.InsertableTable.insert">insert</a>/<a class="autorefs autorefs-internal" href="../insertable-table/#pixeltable.InsertableTable.update">update</a>/<a class="autorefs autorefs-internal" href="../insertable-table/#pixeltable.InsertableTable.delete">delete</a> for that purpose).
+Another difference to pandas is that query execution needs to be initiated explicitly in order to return results.</p>
+<h2 id="overview">Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Query Construction</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.select"><code>select</code></a></td>
+<td>Select output expressions</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.where"><code>where</code></a></td>
+<td>Filter table rows</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.group_by"><code>group_by</code></a></td>
+<td>Group table rows in order to apply aggregate functions</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.order_by"><code>order_by</code></a></td>
+<td>Order output rows</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.limit"><code>limit</code></a></td>
+<td>Limit the number of output rows</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Query Execution</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.collect"><code>collect</code></a></td>
+<td>Return all output rows</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.show"><code>show</code></a></td>
+<td>Return a number of output rows</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.head"><code>head</code></a></td>
+<td>Return the oldest rows</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.tail"><code>tail</code></a></td>
+<td>Return the most recently added rows</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Data Export</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.to_pytorch_dataset"><code>to_pytorch_dataset</code></a></td>
+<td>Return the query result as a pytorch <a href="https://pytorch.org/docs/stable/data.html#torch.utils.data.IterableDataset"><code>IterableDataset</code></a></td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="#pixeltable.DataFrame.to_coco_dataset"><code>to_coco_dataset</code></a></td>
+<td>Return the query result as a COCO dataset</td>
+</tr>
+</tbody>
+</table>
 
 
 <div class="doc doc-object doc-class">
 
 
 
-<h2 id="pixeltable.Table" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">pixeltable.Table</span>
+<h2 id="pixeltable.DataFrame" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">pixeltable.DataFrame</span>
 
 
 </h2>
@@ -718,8 +830,6 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
   <div class="doc doc-contents first">
 
-  
-      <p>Base class for all tabular SchemaObjects.</p>
 
 
   
@@ -739,80 +849,15 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-<h3 id="pixeltable.Table.__getattr__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">__getattr__</span>
-
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__getattr__</span><span class="p">(</span><span class="n">col_name</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.exprs.ColumnRef&#39;</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Return a ColumnRef for the given column name.</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="pixeltable.Table.__getitem__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">__getitem__</span>
-
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__getitem__</span><span class="p">(</span><span class="n">index</span><span class="p">:</span> <span class="n">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="s1">&#39;pixeltable.exprs.ColumnRef&#39;</span><span class="p">,</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Return a ColumnRef for the given column name, or a DataFrame for the given slice.</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="pixeltable.Table.df" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">df</span>
-
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">df</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Return a DataFrame for this table.</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="pixeltable.Table.select" class="doc doc-heading">
+<h3 id="pixeltable.DataFrame.select" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">select</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">,</span> <span class="o">**</span><span class="n">named_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">,</span> <span class="o">**</span><span class="n">named_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-  
-      <p>Return a DataFrame for this table.</p>
 
   </div>
 
@@ -823,17 +868,15 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-<h3 id="pixeltable.Table.where" class="doc doc-heading">
+<h3 id="pixeltable.DataFrame.where" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">where</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">where</span><span class="p">(</span><span class="n">pred</span><span class="p">:</span> <span class="s1">&#39;exprs.Predicate&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">where</span><span class="p">(</span><span class="n">pred</span><span class="p">:</span> <span class="n"><span title="pixeltable.Predicate">Predicate</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-  
-      <p>Return a DataFrame for this table.</p>
 
   </div>
 
@@ -844,17 +887,96 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-<h3 id="pixeltable.Table.show" class="doc doc-heading">
+<h3 id="pixeltable.DataFrame.group_by" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">group_by</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">group_by</span><span class="p">(</span><span class="o">*</span><span class="n">grouping_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Add a group-by clause to this DataFrame.
+Variants:
+- group_by(<base table>): group a component view by their respective base table rows
+- group_by(<expr>, ...): group by the given expressions</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="pixeltable.DataFrame.order_by" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">order_by</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">order_by</span><span class="p">(</span><span class="o">*</span><span class="n">expr_list</span><span class="p">:</span> <span class="n"><span title="pixeltable.Expr">Expr</span></span><span class="p">,</span> <span class="n">asc</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="pixeltable.DataFrame.limit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">limit</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">limit</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="pixeltable.DataFrame.collect" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">collect</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">collect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="pixeltable.DataFrame.show" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">show</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">show</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">show</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-  
-      <p>Return rows from this table.</p>
 
   </div>
 
@@ -865,17 +987,15 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-<h3 id="pixeltable.Table.head" class="doc doc-heading">
+<h3 id="pixeltable.DataFrame.head" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">head</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">head</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-  
-      <p>Return the first n rows inserted into this table.</p>
 
   </div>
 
@@ -886,17 +1006,15 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-<h3 id="pixeltable.Table.tail" class="doc doc-heading">
+<h3 id="pixeltable.DataFrame.tail" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">tail</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">tail</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">tail</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-  
-      <p>Return the last n rows inserted into this table.</p>
 
   </div>
 
@@ -907,18 +1025,63 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-<h3 id="pixeltable.Table.count" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">count</span>
+<h3 id="pixeltable.DataFrame.to_pytorch_dataset" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">to_pytorch_dataset</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">int</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">to_pytorch_dataset</span><span class="p">(</span><span class="n">image_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;pt&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;torch.utils.data.IterableDataset&#39;</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Return the number of rows in this table.</p>
+      <p>Convert the dataframe to a pytorch IterableDataset suitable for parallel loading
+with torch.utils.data.DataLoader.</p>
+<p>This method requires pyarrow &gt;= 13, torch and torchvision to work.</p>
+<p>This method serializes data so it can be read from disk efficiently and repeatedly without
+re-executing the query. This data is cached to disk for future re-use.</p>
 
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>image_format</code></b>
+            (<code>str</code>, default:
+                <code>&#39;pt&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>format of the images. Can be 'pt' (pytorch tensor) or 'np' (numpy array).
+    'np' means image columns return as an RGB uint8 array of shape HxWxC.
+    'pt' means image columns return as a CxHxW tensor with values in [0,1] and type torch.float32.
+        (the format output by torchvision.transforms.ToTensor())</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>&#39;torch.utils.data.IterableDataset&#39;</code>
+        –
+        <div class="doc-md-description">
+          <p>A pytorch IterableDataset: Columns become fields of the dataset, where rows are returned as a dictionary
+compatible with torch.utils.data.DataLoader default collation.</p>
+      </div>
+      </li>
+  </ul>
+
+<details class="constraints" open>
+  <summary>Constraints</summary>
+  <p>The default collate_fn for torch.data.util.DataLoader cannot represent null values as part of a
+pytorch tensor when forming batches. These values will raise an exception while running the dataloader.</p>
+<p>If you have them, you can work around None values by providing your custom collate_fn to the DataLoader
+(and have your model handle it). Or, if these are not meaningful values within a minibtach, you can
+modify or remove any such values through selections and filters prior to calling to_pytorch_dataset().</p>
+</details>
   </div>
 
 </div>
@@ -928,15 +1091,41 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-<h3 id="pixeltable.Table.describe" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">describe</span>
+<h3 id="pixeltable.DataFrame.to_coco_dataset" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">to_coco_dataset</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">describe</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">to_coco_dataset</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="pathlib.Path">Path</span></span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
+  
+      <p>Convert the dataframe to a COCO dataset.
+This dataframe must return a single json-typed output column in the following format:
+{
+    'image': PIL.Image.Image,
+    'annotations': [
+        {
+            'bbox': [x: int, y: int, w: int, h: int],
+            'category': str | int,
+        },
+        ...
+    ],
+}</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pathlib.Path">Path</span></code>
+        –
+        <div class="doc-md-description">
+          <p>Path to the COCO dataset file.</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
