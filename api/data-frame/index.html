@@ -820,17 +820,17 @@ Another difference to pandas is that query execution needs to be initiated expli
 
 
 <h2 id="pixeltable.DataFrame" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">pixeltable.DataFrame</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">pixeltable.DataFrame</span>
 
 
 </h2>
 
 
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -842,180 +842,162 @@ Another difference to pandas is that query execution needs to be initiated expli
 
 
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.DataFrame.collect" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">collect</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">collect</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">collect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">collect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="pixeltable.DataFrame.group_by" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">group_by</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">group_by</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">group_by</span><span class="p">(</span><span class="o">*</span><span class="n">grouping_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">group_by</span><span class="p">(</span><span class="o">*</span><span class="n">grouping_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add a group-by clause to this DataFrame.
 Variants:
 - group_by(<base table>): group a component view by their respective base table rows
 - group_by(<expr>, ...): group by the given expressions</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.DataFrame.head" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">head</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">head</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.DataFrame.limit" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">limit</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">limit</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">limit</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">limit</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.DataFrame.order_by" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">order_by</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">order_by</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">order_by</span><span class="p">(</span><span class="o">*</span><span class="n">expr_list</span><span class="p">:</span> <span class="n"><span title="pixeltable.Expr">Expr</span></span><span class="p">,</span> <span class="n">asc</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">order_by</span><span class="p">(</span><span class="o">*</span><span class="n">expr_list</span><span class="p">:</span> <span class="n"><span title="pixeltable.exprs.Expr">Expr</span></span><span class="p">,</span> <span class="n">asc</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.DataFrame.select" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">select</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">select</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">,</span> <span class="o">**</span><span class="n">named_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">select</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">,</span> <span class="o">**</span><span class="n">named_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.DataFrame.show" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">show</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">show</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">show</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">show</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.DataFrame.tail" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">tail</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">tail</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">tail</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">tail</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.dataframe.DataFrameResultSet">DataFrameResultSet</span></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="pixeltable.DataFrame.to_pytorch_dataset" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">to_pytorch_dataset</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">to_pytorch_dataset</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">to_pytorch_dataset</span><span class="p">(</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_pytorch_dataset</span><span class="p">(</span>
     <span class="n">image_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;pt&quot;</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;torch.utils.data.IterableDataset&quot;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert the dataframe to a pytorch IterableDataset suitable for parallel loading
 with torch.utils.data.DataLoader.</p>
 <p>This method requires pyarrow &gt;= 13, torch and torchvision to work.</p>
@@ -1023,37 +1005,36 @@ with torch.utils.data.DataLoader.</p>
 re-executing the query. This data is cached to disk for future re-use.</p>
 
 
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b><code>image_format</code></b>
-            (<code>str</code>, default:
-                <code>&#39;pt&#39;</code>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>image_format</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;pt&#39;</code>
 )
-        –
-        <div class="doc-md-description">
-          <p>format of the images. Can be 'pt' (pytorch tensor) or 'np' (numpy array).
+          –
+          <div class="doc-md-description">
+            <p>format of the images. Can be 'pt' (pytorch tensor) or 'np' (numpy array).
     'np' means image columns return as an RGB uint8 array of shape HxWxC.
     'pt' means image columns return as a CxHxW tensor with values in [0,1] and type torch.float32.
         (the format output by torchvision.transforms.ToTensor())</p>
-        </div>
-      </li>
-  </ul>
+          </div>
+        </li>
+    </ul>
 
 
-
-  <p>Returns:</p>
-  <ul>
-      <li class="field-body">
-            <code>&#39;torch.utils.data.IterableDataset&#39;</code>
-        –
-        <div class="doc-md-description">
-          <p>A pytorch IterableDataset: Columns become fields of the dataset, where rows are returned as a dictionary
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>&#39;torch.utils.data.IterableDataset&#39;</code>
+          –
+          <div class="doc-md-description">
+            <p>A pytorch IterableDataset: Columns become fields of the dataset, where rows are returned as a dictionary
 compatible with torch.utils.data.DataLoader default collation.</p>
-      </div>
-      </li>
-  </ul>
+          </div>
+        </li>
+    </ul>
+
 
 <details class="constraints" open>
   <summary>Constraints</summary>
@@ -1063,25 +1044,23 @@ pytorch tensor when forming batches. These values will raise an exception while 
 (and have your model handle it). Or, if these are not meaningful values within a minibtach, you can
 modify or remove any such values through selections and filters prior to calling to_pytorch_dataset().</p>
 </details>
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="pixeltable.DataFrame.to_coco_dataset" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">to_coco_dataset</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">to_coco_dataset</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">to_coco_dataset</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="pathlib.Path">Path</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_coco_dataset</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="pathlib.Path">Path</span></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert the dataframe to a COCO dataset.
 This dataframe must return a single json-typed output column in the following format:
 {
@@ -1096,38 +1075,35 @@ This dataframe must return a single json-typed output column in the following fo
 }</p>
 
 
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="pathlib.Path">Path</span></code>
+          –
+          <div class="doc-md-description">
+            <p>Path to the COCO dataset file.</p>
+          </div>
+        </li>
+    </ul>
 
-  <p>Returns:</p>
-  <ul>
-      <li class="field-body">
-            <code><span title="pathlib.Path">Path</span></code>
-        –
-        <div class="doc-md-description">
-          <p>Path to the COCO dataset file.</p>
-      </div>
-      </li>
-  </ul>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="pixeltable.DataFrame.where" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">where</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">where</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">where</span><span class="p">(</span><span class="n">pred</span><span class="p">:</span> <span class="n"><span title="pixeltable.Predicate">Predicate</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">where</span><span class="p">(</span><span class="n">pred</span><span class="p">:</span> <span class="n"><span title="pixeltable.exprs.Predicate">Predicate</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.dataframe.DataFrame" href="#pixeltable.DataFrame">DataFrame</a></span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
 
@@ -1135,8 +1111,7 @@ This dataframe must return a single json-typed output column in the following fo
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 

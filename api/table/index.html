@@ -726,19 +726,19 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 <h2 id="pixeltable.Table" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">pixeltable.Table</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">pixeltable.Table</span>
 
 
 </h2>
 
 
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
       <p>Base class for all tabular SchemaObjects.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -750,234 +750,212 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
 
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.__getattr__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">__getattr__</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">__getattr__</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__getattr__</span><span class="p">(</span><span class="n">col_name</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.exprs.ColumnRef&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__getattr__</span><span class="p">(</span><span class="nf">col_name</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.exprs.ColumnRef&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a ColumnRef for the given column name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="pixeltable.Table.__getitem__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">__getitem__</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">__getitem__</span>
 
 
 </h3>
 <div class="doc-signature highlight"><pre><span></span><code><span class="fm">__getitem__</span><span class="p">(</span>
-    <span class="n">index</span><span class="p">:</span> <span class="n">object</span><span class="p">,</span>
+    <span class="nf">index</span><span class="p">:</span> <span class="n">object</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="s2">&quot;pixeltable.exprs.ColumnRef&quot;</span><span class="p">,</span> <span class="s2">&quot;pixeltable.dataframe.DataFrame&quot;</span><span class="p">]</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a ColumnRef for the given column name, or a DataFrame for the given slice.</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.collect" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">collect</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">collect</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">collect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">collect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return rows from this table.</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.count" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">count</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">count</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">int</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">int</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the number of rows in this table.</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.describe" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">describe</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">describe</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">describe</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">describe</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.df" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">df</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">df</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">df</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">df</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a DataFrame for this table.</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.head" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">head</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">head</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">head</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">head</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the first n rows inserted into this table.</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.select" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">select</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">select</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">,</span> <span class="o">**</span><span class="n">named_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">select</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">,</span> <span class="o">**</span><span class="n">named_items</span><span class="p">:</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a DataFrame for this table.</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.show" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">show</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">show</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">show</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">show</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return rows from this table.</p>
 
-  </div>
+    </div>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
-
 
 
 <h3 id="pixeltable.Table.where" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">where</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">where</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">where</span><span class="p">(</span><span class="n">pred</span><span class="p">:</span> <span class="s1">&#39;exprs.Predicate&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">where</span><span class="p">(</span><span class="n">pred</span><span class="p">:</span> <span class="s1">&#39;exprs.Predicate&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrame&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a DataFrame for this table.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="pixeltable.Table.tail" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">tail</span>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">tail</span>
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">tail</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">tail</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pixeltable.dataframe.DataFrameResultSet&#39;</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the last n rows inserted into this table.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -985,8 +963,7 @@ without having to construct <a class="autorefs autorefs-internal" href="../data-
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
