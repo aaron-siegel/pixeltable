@@ -719,10 +719,10 @@
     <div class="doc doc-contents first">
 
 
-      <p>Iterator over pieces of a document. The document is split into chunks based on the specified separators.
-The iterator output tuples are of schema {'text': StringType()}, but can include additional metadata fields if specified
-in the <code>metadata</code> argument as explained below.
-All chunk text is passed through <code>ftfy.fix_text</code> to fix up common problems with unicode sequences.</p>
+      <p>Iterator over chunks of a document. The document is chunked according to the specified <code>separators</code>.</p>
+<p>The iterator yields a <code>text</code> field containing the text of the chunk, and it may also
+include additional metadata fields if specified in the <code>metadata</code> parameter, as explained below.</p>
+<p>Chunked text will be cleaned with <code>ftfy.fix_text</code> to fix up common problems with unicode sequences.</p>
 
 
 
