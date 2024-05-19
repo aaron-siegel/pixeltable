@@ -703,7 +703,18 @@
 
 
 </h2>
-
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">DocumentSplitter</span><span class="p">(</span>
+    <span class="n">document</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">separators</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+    <span class="n">limit</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">overlap</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">html_skip_tags</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">tiktoken_encoding</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cl100k_base&quot;</span><span class="p">,</span>
+    <span class="n">tiktoken_target_model</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
 
     <div class="doc doc-contents first">
 
@@ -712,16 +723,45 @@
 The iterator output tuples are of schema {'text': StringType()}, but can include additional metadata fields if specified
 in the <code>metadata</code> argument as explained below.
 All chunk text is passed through <code>ftfy.fix_text</code> to fix up common problems with unicode sequences.</p>
-<pre><code>Args:
-    separators: separators to use to split the document into rows. Options are:
-         'heading', 'paragraph', 'sentence', 'token_limit', 'char_limit', 'page'. As with metadata, this
-         may be a comma-separated string, e.g. 'heading, token_limit'.
-    limit: the maximum number of tokens or characters in each chunk, if 'token_limit'
-         or 'char_limit' is specified.
-    metadata: additional metadata fields to include in the output schema:
-         'title', 'heading' (HTML and Markdown), 'sourceline' (HTML), 'page' (PDF), 'bounding_box' (PDF).
-         The input may be a comma-separated string of these values, e.g., 'title,heading,sourceline'.
-</code></pre>
+
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>separators</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>separators to use to split the document into rows. Options are:
+ 'heading', 'paragraph', 'sentence', 'token_limit', 'char_limit', 'page'. As with metadata, this
+ may be a comma-separated string, e.g. 'heading, token_limit'.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>limit</code></b>
+              (<code><span title="typing.Optional">Optional</span>[int]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>the maximum number of tokens or characters in each chunk, if 'token_limit'
+ or 'char_limit' is specified.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>metadata</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>additional metadata fields to include in the output schema:
+ 'title', 'heading' (HTML and Markdown), 'sourceline' (HTML), 'page' (PDF), 'bounding_box' (PDF).
+ The input may be a comma-separated string of these values, e.g., 'title,heading,sourceline'.</p>
+          </div>
+        </li>
+    </ul>
 
 
 
