@@ -583,7 +583,8 @@ class TestTable:
             'c7': ImageType(nullable=False),
             'c8': VideoType(nullable=False),
         }
-        t = cl.create_table('test1', schema)
+        tbl_name = 'test1'
+        t = cl.create_table(tbl_name, schema)
         rows = create_table_data(t)
         status = t.insert(rows)
         assert status.num_rows == len(rows)
@@ -603,6 +604,15 @@ class TestTable:
         assert status.num_rows == 1
         assert status.num_excs == 0
 
+        # drop column, then add it back; insert still works
+        t.drop_column('c4')
+        t.add_column(c4=BoolType(nullable=True))
+        cl = pxt.Client(reload=True)
+        t = cl.get_table(tbl_name)
+        status = t.insert(rows)
+        assert status.num_rows == len(rows)
+        assert status.num_excs == 0
+
         # empty input
         with pytest.raises(excs.Error) as exc_info:
             t.insert([])
@@ -617,30 +627,32 @@ class TestTable:
         assert 'Missing' in str(exc_info.value)
 
         # incompatible schema
-        for (col_name, col_type), value_col_name in zip(schema.items(), ['c2', 'c3', 'c5', 'c5', 'c6', 'c7', 'c2', 'c2']):
-            cl.drop_table('test1', ignore_errors=True)
-            t = cl.create_table('test1', {col_name: col_type})
+        for (col_name, col_type), value_col_name in zip(
+            schema.items(), ['c2', 'c3', 'c5', 'c5', 'c6', 'c7', 'c2', 'c2']
+        ):
+            cl.drop_table(tbl_name, ignore_errors=True)
+            t = cl.create_table(tbl_name, {col_name: col_type})
             with pytest.raises(excs.Error) as exc_info:
                 t.insert({col_name: r[value_col_name]} for r in rows)
             assert 'expected' in str(exc_info.value).lower()
 
         # rows not list of dicts
-        cl.drop_table('test1', ignore_errors=True)
-        t = cl.create_table('test1', {'c1': StringType()})
+        cl.drop_table(tbl_name, ignore_errors=True)
+        t = cl.create_table(tbl_name, {'c1': StringType()})
         with pytest.raises(excs.Error) as exc_info:
             t.insert(['1'])
         assert 'list of dictionaries' in str(exc_info.value)
 
         # bad null value
-        cl.drop_table('test1', ignore_errors=True)
-        t = cl.create_table('test1', {'c1': StringType(nullable=False)})
+        cl.drop_table(tbl_name, ignore_errors=True)
+        t = cl.create_table(tbl_name, {'c1': StringType(nullable=False)})
         with pytest.raises(excs.Error) as exc_info:
             t.insert(c1=None)
         assert 'expected non-None' in str(exc_info.value)
 
         # bad array literal
-        cl.drop_table('test1', ignore_errors=True)
-        t = cl.create_table('test1', {'c5': ArrayType((2, 3), dtype=IntType(), nullable=False)})
+        cl.drop_table(tbl_name, ignore_errors=True)
+        t = cl.create_table(tbl_name, {'c5': ArrayType((2, 3), dtype=IntType(), nullable=False)})
         with pytest.raises(excs.Error) as exc_info:
             t.insert(c5=np.ndarray((3, 2)))
         assert 'expected ndarray((2, 3)' in str(exc_info.value)
