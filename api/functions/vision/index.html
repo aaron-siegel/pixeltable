@@ -14,7 +14,7 @@
         <link rel="prev" href="../video/">
       
       
-        <link rel="next" href="../fireworks/">
+        <link rel="next" href="../anthropic/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -528,6 +528,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    audio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../image/" class="md-nav__link">
         
   
@@ -818,6 +839,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../anthropic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    anthropic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../fireworks/" class="md-nav__link">
         
   
@@ -1097,7 +1139,6 @@ t.select(pxtv.draw_bounding_boxes(t.img, boxes=t.boxes, label=t.labels)).collect
     <span class="n">boxes</span><span class="p">:</span> <span class="n">JsonT</span><span class="p">,</span>
     <span class="n">labels</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">JsonT</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">color</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">label_colors</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">JsonT</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">box_colors</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">JsonT</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">fill</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">width</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
@@ -1152,16 +1193,6 @@ RGB hex codes (e.g., '#FF0000').</p>
           –
           <div class="doc-md-description">
             <p>Single color to be used for all bounding boxes and labels.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-          <b><code>label_colors</code></b>
-              (<code>Optional[JsonT]</code>, default:
-                  <code>None</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>Dictionary mapping labels to colors.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">

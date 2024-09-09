@@ -635,6 +635,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../functions/audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    audio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../functions/image/" class="md-nav__link">
         
   
@@ -837,6 +858,27 @@
             Model and Inference Functions
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/anthropic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    anthropic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1113,7 +1155,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Create a new Label Studio project and link it to the specified <code>Table</code>.</p>
+      <p>Create a new Label Studio project and link it to the specified <a class="autorefs autorefs-internal" href="../table/#pixeltable.Table"><code>Table</code></a>.</p>
 <ul>
 <li>A tutorial notebook with fully worked examples can be found here:
   <a href="https://pixeltable.readme.io/docs/label-studio">Using Label Studio for Annotations with Pixeltable</a></li>
@@ -1126,7 +1168,7 @@ configuration has an entry</p>
 </code></pre>
 <p>then the linked project will have a column named <code>image</code>. In addition, the linked project
 will always have a JSON-typed column <code>annotations</code> representing the output.</p>
-<p>By default, Pixeltable will link each of these columns to a column of the specified <code>Table</code>
+<p>By default, Pixeltable will link each of these columns to a column of the specified <a class="autorefs autorefs-internal" href="../table/#pixeltable.Table"><code>Table</code></a>
 with the same name. If any of the data fields are missing, an exception will be raised. If
 the <code>annotations</code> column is missing, it will be created. The default names can be overridden
 by specifying an optional <code>col_mapping</code>, with Pixeltable column names as keys and Label
@@ -1151,7 +1193,7 @@ consistent with their corresponding Label Studio fields; otherwise, an exception
               (<code><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></code>)
           –
           <div class="doc-md-description">
-            <p>The Table to link to.</p>
+            <p>The table to link to.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -1225,7 +1267,7 @@ The default is <code>post</code>.</li>
           –
           <div class="doc-md-description">
             <p>If <code>True</code>, immediately perform an initial synchronization by
-exporting all rows of the <code>Table</code> as Label Studio tasks.</p>
+exporting all rows of the table as Label Studio tasks.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -1318,14 +1360,27 @@ whose media are stored in an S3 bucket:</p>
     <span class="n">num_retained_versions</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
     <span class="n">comment</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.catalog.InsertableTable">InsertableTable</span></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a new <code>Table</code> from a csv file. This is a convenience method and is equivalent
+      <p>Creates a new base table from a csv file. This is a convenience method and is equivalent
 to calling <code>import_pandas(table_path, pd.read_csv(filepath_or_buffer, **kwargs), schema=schema)</code>.
-See the Pandas documentation for <code>read_csv</code> for more details.</p>
+See the Pandas documentation for <a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"><code>read_csv</code></a>
+for more details.</p>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></code>
+          –
+          <div class="doc-md-description">
+            <p>A handle to the newly created <a class="autorefs autorefs-internal" href="../table/#pixeltable.Table"><code>Table</code></a>.</p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
@@ -1348,14 +1403,27 @@ See the Pandas documentation for <code>read_csv</code> for more details.</p>
     <span class="n">num_retained_versions</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
     <span class="n">comment</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.catalog.InsertableTable">InsertableTable</span></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a new <code>Table</code> from an excel (.xlsx) file. This is a convenience method and is equivalent
-to calling <code>import_pandas(table_path, pd.read_excel(io, *args, **kwargs), schema=schema)</code>.
-See the Pandas documentation for <code>read_excel</code> for more details.</p>
+      <p>Creates a new base table from an Excel (.xlsx) file. This is a convenience method and is
+equivalent to calling <code>import_pandas(table_path, pd.read_excel(io, *args, **kwargs), schema=schema)</code>.
+See the Pandas documentation for <a href="https://pandas.pydata.org/docs/reference/api/pandas.read_excel.html"><code>read_excel</code></a>
+for more details.</p>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></code>
+          –
+          <div class="doc-md-description">
+            <p>A handle to the newly created <a class="autorefs autorefs-internal" href="../table/#pixeltable.Table"><code>Table</code></a>.</p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
@@ -1383,8 +1451,8 @@ See the Pandas documentation for <code>read_excel</code> for more details.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a new <code>Table</code> from a JSON file. This is a convenience method and is equivalent
-to calling <code>import_data(table_path, json.loads(file_contents, **kwargs), ...)</code>, where <code>file_contents</code>
+      <p>Creates a new base table from a JSON file. This is a convenience method and is
+equivalent to calling <code>import_data(table_path, json.loads(file_contents, **kwargs), ...)</code>, where <code>file_contents</code>
 is the contents of the specified <code>filepath_or_url</code>.</p>
 
 
@@ -1466,7 +1534,7 @@ is the contents of the specified <code>filepath_or_url</code>.</p>
               <code><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></code>
           –
           <div class="doc-md-description">
-            <p>The newly created <code>Table</code>.</p>
+            <p>A handle to the newly created <a class="autorefs autorefs-internal" href="../table/#pixeltable.Table"><code>Table</code></a>.</p>
           </div>
         </li>
     </ul>
@@ -1491,14 +1559,15 @@ is the contents of the specified <code>filepath_or_url</code>.</p>
     <span class="n">primary_key</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">num_retained_versions</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
     <span class="n">comment</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pixeltable.catalog.InsertableTable">InsertableTable</span></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a new <code>Table</code> from a Pandas <code>DataFrame</code>, with the specified name. The schema of the table
-will be inferred from the <code>DataFrame</code>.</p>
-<p>The column names of the new <code>Table</code> will be identical to those in the <code>DataFrame</code>, as long as they are valid
+      <p>Creates a new base table from a Pandas
+<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"><code>DataFrame</code></a>, with the
+specified name. The schema of the table will be inferred from the DataFrame.</p>
+<p>The column names of the new table will be identical to those in the DataFrame, as long as they are valid
 Pixeltable identifiers. If a column name is not a valid Pixeltable identifier, it will be normalized according to
 the following procedure:
 - first replace any non-alphanumeric characters with underscores;
@@ -1539,6 +1608,18 @@ Pixeltable identifiers).</p>
         </li>
     </ul>
 
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></code>
+          –
+          <div class="doc-md-description">
+            <p>A handle to the newly created <a class="autorefs autorefs-internal" href="../table/#pixeltable.Table"><code>Table</code></a>.</p>
+          </div>
+        </li>
+    </ul>
+
     </div>
 
 </div>
@@ -1564,13 +1645,13 @@ Pixeltable identifiers).</p>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a new <code>Table</code> from a list of dictionaries. The dictionaries must be of the form
-<code>{column_name: value, ...}</code>. Pixeltable will attempt to infer the schema of the table from the
+      <p>Creates a new base table from a list of dictionaries. The dictionaries must be of the
+form <code>{column_name: value, ...}</code>. Pixeltable will attempt to infer the schema of the table from the
 supplied data, using the most specific type that can represent all the values in a column.</p>
 <p>If <code>schema_overrides</code> is specified, then for each entry <code>(column_name, type)</code> in <code>schema_overrides</code>,
 Pixeltable will force the specified column to the specified type (and will not attempt any type inference
 for that column).</p>
-<p>All column types of the new <code>Table</code> will be nullable unless explicitly specified as non-nullable in
+<p>All column types of the new table will be nullable unless explicitly specified as non-nullable in
 <code>schema_overrides</code>.</p>
 
 
@@ -1642,7 +1723,7 @@ as described above.</p>
               <code><a class="autorefs autorefs-internal" title="pixeltable.Table" href="../table/#pixeltable.Table">Table</a></code>
           –
           <div class="doc-md-description">
-            <p>The newly created <code>Table</code>.</p>
+            <p>A handle to the newly created <a class="autorefs autorefs-internal" href="../table/#pixeltable.Table"><code>Table</code></a>.</p>
           </div>
         </li>
     </ul>
