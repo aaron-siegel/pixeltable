@@ -1122,6 +1122,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../functions/mistralai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mistralai
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../functions/openai/" class="md-nav__link">
         
   
@@ -1755,13 +1776,60 @@ as arguments to the Callable). In this case, the column type needs to be specifi
 
     <div class="doc doc-contents ">
 
-      <p>Add an index to the table.
-Args:
-    col_name: name of column to index
-    idx_name: name of index, which needs to be unique for the table; if not provided, a name will be generated
-    string_embed: function to embed text; required if the column is a text column
-    image_embed: function to embed images; required if the column is an image column
-    metric: distance metric to use for the index; one of 'cosine', 'ip', 'l2'; default is 'cosine'</p>
+      <p>Add an index to the table.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>col_name</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>name of column to index</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>idx_name</code></b>
+              (<code><span title="typing.Optional">Optional</span>[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>name of index, which needs to be unique for the table; if not provided, a name will be generated</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>string_embed</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="pixeltable.Function">Function</span>]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>function to embed text; required if the column is a text column</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>image_embed</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="pixeltable.Function">Function</span>]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>function to embed images; required if the column is an image column</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>metric</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;cosine&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>distance metric to use for the index; one of 'cosine', 'ip', 'l2'; default is 'cosine'</p>
+          </div>
+        </li>
+    </ul>
 
 
 <p><span class="doc-section-title">Raises:</span></p>
