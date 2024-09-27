@@ -986,6 +986,90 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Extended Model and Inference Functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Extended Model and Inference Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ext/functions/whisperx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    whisperx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ext/functions/yolox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yolox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1124,6 +1208,15 @@ t.select(pxtv.draw_bounding_boxes(t.img, boxes=t.boxes, label=t.labels)).collect
 
       <p>Calculates the mean average precision (mAP) over
 <a class="autorefs autorefs-internal" href="#pixeltable.functions.vision.eval_detections"><code>eval_detections()</code></a> results.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>eval_dicts</code> (list[dict]): List of dictionaries as returned by
+    <a class="autorefs autorefs-internal" href="#pixeltable.functions.vision.eval_detections"><code>eval_detections()</code></a>.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>A <code>dict[int, float]</code> mapping each label class to an average precision (AP) value for that class.</li>
+</ul>
 
 
 
@@ -1301,12 +1394,117 @@ If <code>None</code>, uses the default provided by
     <span class="n">pred_scores</span><span class="p">:</span> <span class="n">JsonT</span><span class="p">,</span>
     <span class="n">gt_bboxes</span><span class="p">:</span> <span class="n">JsonT</span><span class="p">,</span>
     <span class="n">gt_labels</span><span class="p">:</span> <span class="n">JsonT</span><span class="p">,</span>
+    <span class="n">min_iou</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JsonT</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
       <p>Evaluates the performance of a set of predicted bounding boxes against a set of ground truth bounding boxes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>pred_bboxes</code></b>
+              (<code>JsonT</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of predicted bounding boxes, each represented as [xmin, ymin, xmax, ymax].</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>pred_labels</code></b>
+              (<code>JsonT</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of predicted labels.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>pred_scores</code></b>
+              (<code>JsonT</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of predicted scores.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>gt_bboxes</code></b>
+              (<code>JsonT</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of ground truth bounding boxes, each represented as [xmin, ymin, xmax, ymax].</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>gt_labels</code></b>
+              (<code>JsonT</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of ground truth labels.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>min_iou</code></b>
+              (<code>float</code>, default:
+                  <code>0.5</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Minimum intersection-over-union (IoU) threshold for a predicted bounding box to be
+considered a true positive.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>JsonT</code>
+          –
+          <div class="doc-md-description">
+            <p>A list of dictionaries, one per label class, with the following structure:</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>JsonT</code>
+          –
+          <div class="doc-md-description">
+            <p>```python</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>JsonT</code>
+          –
+          <div class="doc-md-description">
+            <p>{
+'min_iou': float,  # The value of <code>min_iou</code> used for the detections
+'class': int,  # The label class
+'tp': list[int],  # List of 1's and 0's indicating true positives for each
+                  # predicted bounding box of this class
+'fp': list[int],  # List of 1's and 0's indicating false positives for each
+                  # predicted bounding box of this class; <code>fp[n] == 1 - tp[n]</code>
+'scores': list[float],  # List of predicted scores for each bounding box of this class
+'num_gts': int,  # Number of ground truth bounding boxes of this class</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>JsonT</code>
+          –
+          <div class="doc-md-description">
+            <p>}</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>JsonT</code>
+          –
+          <div class="doc-md-description">
+            <p>```</p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
