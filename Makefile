@@ -47,6 +47,7 @@ help:
 	@echo '  install       Install the development environment'
 	@echo '  test          Run pytest, stresstest, and check'
 	@echo '  fulltest      Run fullpytest, nbtest, stresstest, and check'
+	@echo '  slimtest      Run a slimpytest and check'
 	@echo '  check         Run typecheck, docscheck, lint, and formatcheck'
 	@echo '  format        Run `ruff format` (updates .py files in place)'
 	@echo '  release       Create a pypi release and post to github'
@@ -59,6 +60,7 @@ help:
 	@echo '  clean         Remove generated files and temp files'
 	@echo '  pytest        Run `pytest`'
 	@echo '  fullpytest    Run `pytest`, including expensive tests'
+	@echo '  slimpytest    Run a minimal pytest configuration'
 	@echo '  nbtest        Run `pytest` on notebooks'
 	@echo '  stresstest    Run stress tests such as random-tbl-ops'
 	@echo '  typecheck     Run `mypy`'
@@ -120,6 +122,10 @@ test: pytest check
 fulltest: fullpytest nbtest check
 	@echo 'All tests passed.'
 
+.PHONY: slimtest
+slimtest: slimpytest check
+	@echo 'All tests passed.'
+
 .PHONY: check
 check: typecheck docscheck lint formatcheck
 	@echo 'All static checks passed.'
@@ -133,6 +139,11 @@ pytest: install
 fullpytest: install
 	@echo 'Running `pytest`, including expensive tests ...'
 	@$(ULIMIT_CMD) pytest $(PYTEST_COMMON_ARGS) -m '' tests
+
+.PHONY: slimpytest
+slimpytest: install
+	@echo 'Running `pytest` on a slim configuration ...'
+	@$(ULIMIT_CMD) pytest $(PYTEST_COMMON_ARGS) tests/test_{catalog,dirs,env,exprs,function,index,snapshot,table,view}.py
 
 .PHONY: nbtest
 nbtest: install
