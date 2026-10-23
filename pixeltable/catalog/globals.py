@@ -166,11 +166,14 @@ def is_system_column_name(name: str) -> bool:
 
 def col_type_from_spec(column_spec: ColumnSpec) -> ts.ColumnType:
     """The ColumnType that a column defined by `column_spec` will have."""
+    from .column import Column
+
     if 'type' in column_spec:
-        return ts.ColumnType.normalize_type(column_spec['type'], allow_builtin_types=False)
+        return Column.resolve_col_type(
+            ts.ColumnType.normalize_type(column_spec['type'], allow_builtin_types=False), None
+        )
     assert 'value' in column_spec
-    # as in Column, a column's type is open
-    return column_spec['value'].col_type.opened()
+    return Column.resolve_col_type(None, column_spec['value'])
 
 
 def normalize_schema(schema: Mapping[str, TypeForm | ColumnSpec | exprs.Expr]) -> dict[str, ColumnSpec]:

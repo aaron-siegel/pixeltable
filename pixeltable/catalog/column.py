@@ -119,15 +119,10 @@ class Column:
                     f'but it is a {type(computed_with)}',
                 )
             self._value_expr = value_expr.copy()
-            self.col_type = self._value_expr.col_type
         if self._value_expr is not None and self.value_expr_dict is None:
             self.value_expr_dict = self._value_expr.as_dict()
 
-        if col_type is not None:
-            self.col_type = col_type
-        assert self.col_type is not None
-        # a column's type is open, though the type of its value expression may contain closed schemas from literals
-        self.col_type = self.col_type.opened()
+        self.col_type = self.resolve_col_type(col_type, self._value_expr)
 
         self.stored = stored
         self.id = col_id
@@ -161,6 +156,18 @@ class Column:
         # user-defined metadata - stored but not used by Pixeltable itself
         self._custom_metadata = custom_metadata
         self._comment = comment
+
+    @staticmethod
+    def resolve_col_type(col_type: ts.ColumnType | None, value_expr: exprs.Expr | None) -> ts.ColumnType:
+        """
+        The type of a column with an explicit `col_type`, or else computed by `value_expr`.
+
+        A column's type is open, though the type of its value expression may contain closed schemas from literals.
+        """
+        if col_type is None:
+            assert value_expr is not None
+            col_type = value_expr.col_type
+        return col_type.opened()
 
     @classmethod
     def should_store_cellmd(cls, *, col_type: ts.ColumnType, is_stored: bool, is_computed: bool) -> bool:
